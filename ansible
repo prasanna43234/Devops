@@ -1,0 +1,31 @@
+ansible all -m ping 
+ansible all -m command -a "uptime"
+ansible webservers -m shell -a "df -h"
+ansible all -m yum -a "name=httpd state=present"
+ansible all -m service -a "name=httpd state=restarted"
+ansible all -m cp -a "src=/path/to/sourcedirectory dest=/destination/directory"
+ansible all -m file -a "path=/source/file state=directory"
+ansible all -m file -a "path=/file/path mode=755"
+ansible all -m command -a "top"
+ansible all -m command -a "ps aux"
+
+pipeline{
+    agent any 
+     stages{
+      stage('checking out code'){
+         steps{
+              git clone url..............
+         }}
+     stage('Build'){
+         steps{
+              sh mvn clean install
+         }}
+         stage('Deploy'){
+         steps{
+              
+         }
+      }
+     }
+}
+
+
