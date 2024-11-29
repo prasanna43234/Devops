@@ -1,0 +1,22 @@
+SSSB
+
+
+Docker Compose is a tool used for defining and running multi-container Docker applications. It allows you to manage multiple services, networks, and volumes using a single configuration file, typically called docker-compose.yml. With Docker Compose, you can spin up complex applications that require several containers, like web servers, databases, and caching layers, all in one command.
+
+Key Components of Docker Compose:
+
+Services: Define the different containers in your application. Each service runs one image and can define options such as ports, environment variables, volumes, and networks.
+  
+Networks: Allow communication between containers. Docker Compose automatically creates a default network for services to communicate.
+
+Volumes: Define shared storage between containers or between the container and the host.
+
+sudo apt update                      # For Ubuntu/Debian
+sudo apt install docker.io -y        # For Ubuntu/Debian
+sudo yum install docker -y           # For CentOS/RHEL
+sudo systemctl start docker
+sudo systemctl enable docker
+
+
+
+
